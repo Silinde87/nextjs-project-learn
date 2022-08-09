@@ -8,11 +8,13 @@ import Link from 'next/link';
 // https://nextjs.org/docs/api-reference/next/link
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
+import React from 'react';
+import { LayoutProps } from './layout.types';
 
-const name = 'Silinde87';
-export const siteTitle = 'Next.js Sample Website';
+const name: string = 'Silinde87';
+export const siteTitle: string = 'Next.js Sample Website';
 
-const Layout = ({ children, home }) => {
+const Layout: React.FC<LayoutProps> = ({ children, home }) => {
 	return (
 		<div className={styles.container}>
 			<Head>

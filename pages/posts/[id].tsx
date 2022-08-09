@@ -1,10 +1,12 @@
 import Head from 'next/head';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import Layout from '../../components/layout';
 import Date from '../../components/date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import utilStyles from '../../styles/utils.module.css';
+import { PostProps } from './posts.types';
 
-const Post = ({ postData }) => {
+const Post: React.FC<PostProps> = ({ postData }) => {
 	return (
 		<Layout>
 			<Head>
@@ -22,7 +24,7 @@ const Post = ({ postData }) => {
 };
 
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
 	const paths = getAllPostIds();
 	return {
 		paths,
@@ -32,7 +34,7 @@ export const getStaticPaths = async () => {
 };
 
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
-export const getStaticProps = async (props) => {
+export const getStaticProps: GetStaticProps = async (props) => {
 	const postData = await getPostData(props.params.id);
 	return {
 		props: {
