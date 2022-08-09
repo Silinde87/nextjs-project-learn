@@ -1,0 +1,1 @@
+This is the project that results from the Next.JS official guide [Learn Next.js](https://nextjs.org/learn).
