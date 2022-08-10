@@ -8,10 +8,7 @@ import { PostProps } from './posts.types';
 
 const Post: React.FC<PostProps> = ({ postData }) => {
 	return (
-		<Layout>
-			<Head>
-				<title>{postData.title}</title>
-			</Head>
+		<Layout title={postData.title}>
 			<article>
 				<h1 className={utilStyles.headingXl}>{postData.title}</h1>
 				<div className={utilStyles.lightText}>

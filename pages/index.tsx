@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import Date from '../components/date';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import { HomeProps } from './home.types';
@@ -10,9 +10,6 @@ import { HomeProps } from './home.types';
 const Home: React.FC<HomeProps> = ({ allPostsData }) => {
 	return (
 		<Layout home>
-			<Head>
-				<title>{siteTitle}</title>
-			</Head>
 			<section className={utilStyles.headingMd}>
 				<p>[Your Self Introduction]</p>
 				<p>
