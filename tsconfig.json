@@ -16,6 +16,13 @@
 		"isolatedModules": true,
 		"jsx": "preserve"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"pages/index.tsx",
+		"jest.config.js",
+		"./setup-jest.js"
+	],
 	"exclude": ["node_modules"]
 }

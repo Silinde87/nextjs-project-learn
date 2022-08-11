@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import Date from '../components/date';
-import Layout from '../components/layout';
+import Date from './../components/Date';
+import Layout from '../components/Layout';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData } from '../services/posts';
 import { HomeProps } from './home.types';
 
 const Home: React.FC<HomeProps> = ({ allPostsData }) => {

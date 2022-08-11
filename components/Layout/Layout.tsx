@@ -6,10 +6,9 @@ import Image from 'next/image';
 // https://nextjs.org/docs/api-reference/next/image
 import Link from 'next/link';
 // https://nextjs.org/docs/api-reference/next/link
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import React from 'react';
-import { LayoutProps } from './layout.types';
+import styles from './Layout.module.css';
+import utilStyles from '../../styles/utils.module.css';
+import { LayoutProps } from './Layout.types';
 
 const name: string = 'Silinde87';
 const siteTitle: string = 'Next.js Sample Website';
